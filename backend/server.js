@@ -22,7 +22,7 @@ connectDB();
 const allowedOrigins = [
   'http://localhost:8080',
   'http://localhost:5173',
-  "https://nodeflow-coral.vercel.app/"
+  process.env.FRONTEND_URL
 ].filter(Boolean);
 
 app.use(cors({
