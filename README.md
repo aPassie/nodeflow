@@ -161,18 +161,6 @@ nodeflow/
 - Role-based access control
 - Protected API routes
 
-## 🌐 Deployment
-
-Ready to deploy? We've got you covered!
-
-📚 **[Full Deployment Guide](./DEPLOYMENT.md)** - Detailed step-by-step instructions
-
-⚡ **[Quick Deploy Guide](./DEPLOY_QUICK.md)** - TL;DR version (15 mins total)
-
-**Recommended Stack:**
-- Frontend: Vercel (free, auto-deploys from GitHub)
-- Backend: Render (free tier available)
-- Database: MongoDB Atlas (512MB free)
 
 ### Live Links
 - **Frontend:** https://nodeflow-coral.vercel.app/
