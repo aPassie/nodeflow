@@ -1,4 +1,10 @@
-require('dotenv').config({ path: '../.env' });
+// Load environment variables from parent directory in development
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config({ path: '../.env' });
+} else {
+  require('dotenv').config();
+}
+
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
@@ -12,9 +18,27 @@ const app = express();
 
 connectDB();
 
-app.use(cors());
+// CORS configuration
+const allowedOrigins = [
+  'http://localhost:8080',
+  'http://localhost:5173',
+  "https://nodeflow-coral.vercel.app/"
+].filter(Boolean);
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+}));
+
 app.use(express.json());
-app.use('/uploads', express.static('backend/uploads'));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);

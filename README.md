@@ -163,27 +163,20 @@ nodeflow/
 
 ## 🌐 Deployment
 
-### Frontend Deployment
-Deploy the `frontend` folder to:
-- Vercel (recommended, one click deploy)
+Ready to deploy? We've got you covered!
 
-Don't forget to set `VITE_API_URL` to your production backend URL.
+📚 **[Full Deployment Guide](./DEPLOYMENT.md)** - Detailed step-by-step instructions
 
-### Backend Deployment
-Deploy the `backend` folder to:
-- Render
+⚡ **[Quick Deploy Guide](./DEPLOY_QUICK.md)** - TL;DR version (15 mins total)
 
-
-Set these environment variables:
-- `PORT`
-- `MONGODB_URI` (MongoDB Atlas recommended)
-- `JWT_SECRET`
+**Recommended Stack:**
+- Frontend: Vercel (free, auto-deploys from GitHub)
+- Backend: Render (free tier available)
+- Database: MongoDB Atlas (512MB free)
 
 ### Live Links
-- **Frontend:** [Add your deployment link here]
-- **Backend API:** [Add your API URL here]
+- **Frontend:** https://nodeflow-coral.vercel.app/
+- **Backend API:** https://nodeflow-backend.onrender.com
 
-
----
-
+> After deployment, update these links in the README!
 **Remember:** The best task manager is the one you actually use. Now go organize some stuff! ✨
