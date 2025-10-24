@@ -1,0 +1,16 @@
+{
+  "name": "nodeflow",
+  "version": "1.0.0",
+  "description": "NodeFlow Task Manager - MERN Stack Application",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "server": "cd backend && npm start",
+    "server:dev": "cd backend && npm run dev",
+    "dev:all": "concurrently \"npm run server:dev\" \"npm run dev\"",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
